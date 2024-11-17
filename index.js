@@ -46,7 +46,9 @@ function logger(req,res,next){
 
 app.use(cors())
 app.get("/",(req,res)=>{
-  res.sendFile(__dirname+"/public/index.html")
+  res.json({
+    msg:"Server is running"
+  })
 })
 app.post("/signup",(req,res)=>{
   const username=req.body.username
